@@ -1,0 +1,151 @@
+
+.text-field{
+    width: 400px;
+}
+
+
+
+
+
+.width-5{
+    width: 50%;
+}.width-10{
+    width: 50%;
+}.width-15{
+    width: 50%;
+}.width-20{
+    width: 50%;
+}.width-25{
+    width: 50%;
+}
+.width-30{
+    width: 50%;
+}.width-35{
+    width: 50%;
+}.width-40{
+    width: 50%;
+}.width-45{
+    width: 50%;
+}.width-50{
+    width: 50%;
+}.width-55{
+    width: 50%;
+}.width-60{
+    width: 50%;
+}.width-65{
+    width: 50%;
+}.width-70{
+    width: 50%;
+}.width-75{
+    width: 50%;
+}.width-80{
+    width: 50%;
+}.width-85{
+    width: 50%;
+}.width-90{
+    width: 50%;
+}.width-95{
+    width: 50%;
+}.width-100{
+    width: 50%;
+}
+
+
+
+
+
+.marging-left-5{
+    margin-left: 5px;
+}
+
+.marging-left-10{
+    margin-left: 10px;
+}.marging-left-15{
+    margin-left: 15px;
+}.marging-left-20{
+    margin-left: 20px;
+}.marging-left-25{
+    margin-left: 25px;
+}.marging-left-30{
+    margin-left: 30px;
+}.marging-left-35{
+    margin-left: 35px;
+}.marging-left-40{
+    margin-left: 40px;
+}.marging-left-45{
+    margin-left: 45px;
+}.marging-left-50{
+    margin-left: 50px;
+}.marging-left-55{
+    margin-left: 55px;
+}.marging-left-60{
+    margin-left: 60px;
+}.marging-left-65{
+    margin-left: 65px;
+}.marging-left-70{
+    margin-left: 70px;
+}
+
+.marging-left-75{
+    margin-left: 75px;
+}
+
+.marging-left-80{
+    margin-left: 80px;
+}
+.marging-left-85{
+    margin-left: 85px;
+}
+.marging-left-90{
+    margin-left: 90px;
+}
+.marging-left-95{
+    margin-left: 95px;
+}
+.marging-left-100{
+    margin-left: 100px;
+}
+
+
+.marging-5{
+    margin: 5px;
+}
+
+.marging-10{
+    margin: 10px;
+}
+
+.marging-top-left{
+    margin: 0px 
+}
+.styke{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.f {
+    clear: both;
+}
+
+.marging-top-20{
+    margin-top: 20%;
+    border-top: 2px solid blueviolet;
+}
+
+
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+  margin-left: 0px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
