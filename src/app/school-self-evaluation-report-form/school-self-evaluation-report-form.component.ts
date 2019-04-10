@@ -39,8 +39,8 @@ export class SchoolSelfEvaluationReportFormComponent implements OnInit , AfterVi
   @ViewChild(SignaturePad) signaturePad: SignaturePad;
 
   private signaturePadOptions: Object = {
-    'minWidth': 2,
-    'canvasWidth': 700,
+    'minWidth': 0.7,
+    'canvasWidth': 800,
     'canvasHeight': 500
   };
 

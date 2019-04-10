@@ -1,225 +1,212 @@
 
 
 <mat-card class="margin-top-20">
-<mat-card-header>
-
-
-  <div mat-card-avatar>
-  <!-- a-md-i -->
-  </div>
-
-  <mat-card-title>
-    <h3>School Self Evaluation Report Form</h3>
-  </mat-card-title>.
-
-  <mat-card-subtitle>
-    This form is to be filled in by the school
-    and varified by the evaluators
-  </mat-card-subtitle>
-</mat-card-header>
-
-
-
-
-
-
- <mat-card-content>
-   <mat-horizontal-stepper [linear]="true" #stepper>
-    <mat-step>
-        <ng-template matStepLabel>Please Fill in properly</ng-template>
-
-      <form [formGroup]="schoolProfile">
-
-        <mat-form-field appearance="outline" class="width-10 ">
-          <mat-select placeholder="Choose State..." formControlName="state">
-            <mat-option [value]="state" *ngFor="let state of listOfState">{{state}}</mat-option>
-          </mat-select>
-          <!--<mat-error *ngIf="schoolProfile.state.invalid">Please enter a correct value</mat-error>-->
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="width-10 ">
-          <mat-label>Select your LGA</mat-label>
-          <input matInput placeholder="L.G.A" formControlName="lga">
-          <!--<mat-error *ngIf="schoolProfile.lga.invalid">Please enter a correct value</mat-error>-->
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="width-10 ">
-          <mat-select placeholder="School Type" formControlName="schoolType">
-            <mat-option value="Co-educational school">Co-educational school</mat-option>
-            <mat-option value="Single-sex school">Single-sex school</mat-option>
-          </mat-select>
-          <!--<mat-error *ngIf="schoolProfile.schoolType.invalid">Please enter a correct value</mat-error>-->
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="width-10 ">
-          <mat-label>Number of Boys</mat-label>
-          <input matInput placeholder="Number of boys" formControlName="numberOfBoys">
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="width-10 ">
-          <mat-label>Number of Girls</mat-label>
-          <input matInput placeholder="Number of girls" formControlName="numberOfGirls">
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="width-10 ">
-          <mat-label>Total Number of Learners</mat-label>
-          <input matInput placeholder="Total number of learners" formControlName="totalNumberOFLearners">
-        </mat-form-field>
-
-        <mat-card>
-          <h2>School Profile</h2>
-        </mat-card>
-
-        <mat-form-field appearance="outline" class="width-10 ">
-          <mat-label>School/Center Code</mat-label>
-          <input matInput placeholder="School/Center Code" formControlName="schoolOrCenterCode">
-        </mat-form-field>
-
-
-        <mat-form-field appearance="outline" class="width-10 ">
-          <mat-label>Name of School / Center</mat-label>
-          <input matInput placeholder="Name of school/ Center" formControlName="nameOfSchoolOrCenter">
-        </mat-form-field>
-
-
-
-        <mat-form-field appearance="outline" class="width-10 ">
-          <input matInput placeholder="Year of Establishment" formControlName="yearOfEstablishment">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="width-10 ">
-          <mat-select [(ngModel)]="locationSelect" formControlName="location">
-            <mat-option value="Urban">Urban</mat-option>
-            <mat-option value="Rural">Rural</mat-option>
-            <mat-option  value="Other">Other</mat-option>
-          </mat-select>
-        </mat-form-field>
-
-
-    <div>
-
-      <mat-card>
-        Address of the school
-      </mat-card>
-
-      <mat-form-field appearance="outline" class="width-10 ">
-        <mat-label>Street Address</mat-label>
-        <input matInput placeholder="Street" formControlName="streetAddress" type="text">
-      </mat-form-field>
-
-      <mat-form-field appearance="outline" class="width-10 ">
-        <input matInput placeholder="P.O. Box" formControlName="poBox" type="text">
-      </mat-form-field>
-
-      <mat-form-field appearance="outline" class="width-10 ">
-        <mat-label> Town / Village </mat-label>
-        <input matInput placeholder="placeholder" formControlName="town_Village" type="text">
-      </mat-form-field>
-
-      <mat-form-field appearance="outline" class="width-10 ">
-        <mat-icon matSuffix>phone</mat-icon>
-        <mat-label> Town / Village </mat-label>
-        <input matInput placeholder="placeholder" formControlName="telephone" type="tel">
-      </mat-form-field>
-
-      <mat-form-field appearance="outline" class="width-10 ">
-        <mat-icon matSuffix>email</mat-icon>
-        <mat-label> Email </mat-label>
-        <input matInput placeholder="Enter Email" formControlName="email" type="email">
-      </mat-form-field>
-
+  <mat-card-header>
+  
+  
+    <div mat-card-avatar>
+    <!-- a-md-i -->
     </div>
-
-
-
-    <!---------------Another section---------------->
-    <div>
-      <mat-select [(ngModel)]="ownerShip" formControlName="ownerShip" [value]="" class="width-10 ">
-        <mat-label>Ownership</mat-label>
-        <mat-option value="Private">Private</mat-option>
-        <mat-option value="Public"> Public</mat-option>
-      </mat-select>
-    </div>
-
-
-
+  
+    <mat-card-title>
+      <h3>School Self Evaluation Report Form</h3>
+    </mat-card-title>.
+  
+    <mat-card-subtitle>
+      This form is to be filled in by the school
+      and varified by the evaluators
+    </mat-card-subtitle>
+  </mat-card-header>
+  
+  
+  
+  
+  
+  
+   <mat-card-content>
+     <mat-horizontal-stepper [linear]="true" #stepper>
+      <mat-step>
+          <ng-template matStepLabel>Please Fill in properly</ng-template>
+  
+        <form [formGroup]="schoolProfile">
+  
+          <mat-form-field appearance="outline" class="width-45 marging-right-10 ">
+            <mat-select placeholder="Choose State..." formControlName="state">
+              <mat-option [value]="state" *ngFor="let state of listOfState">{{state}}</mat-option>
+            </mat-select>
+            <!--<mat-error *ngIf="schoolProfile.state.invalid">Please enter a correct value</mat-error>-->
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="width-45 marging-left-10 ">
+            <mat-label>Select your LGA</mat-label>
+            <input matInput placeholder="L.G.A" formControlName="lga">
+            <!--<mat-error *ngIf="schoolProfile.lga.invalid">Please enter a correct value</mat-error>-->
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="width-45 marging-right-10 ">
+            <mat-select placeholder="School Type" formControlName="schoolType">
+              <mat-option value="Co-educational school">Co-educational school</mat-option>
+              <mat-option value="Single-sex school">Single-sex school</mat-option>
+            </mat-select>
+            <!--<mat-error *ngIf="schoolProfile.schoolType.invalid">Please enter a correct value</mat-error>-->
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="width-45 marging-left-10 ">
+            <mat-label>Number of Boys</mat-label>
+            <input matInput placeholder="Number of boys" formControlName="numberOfBoys">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="width-45 marging-right-10 ">
+            <mat-label>Number of Girls</mat-label>
+            <input matInput placeholder="Number of girls" formControlName="numberOfGirls">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="width-45 marging-left-10">
+            <mat-label>Total Number of Learners</mat-label>
+            <input matInput placeholder="Total number of learners" formControlName="totalNumberOFLearners">
+          </mat-form-field>
+  
+          <mat-card>
+            <h2>School Profile</h2>
+          </mat-card>
+  
+          <mat-form-field appearance="outline" class="width-45 marging-right-10">
+            <mat-label>School/Center Code</mat-label>
+            <input matInput placeholder="School/Center Code" formControlName="schoolOrCenterCode">
+          </mat-form-field>
+  
+  
+          <mat-form-field appearance="outline" class="width-45 marging-left-10">
+            <mat-label>Name of School / Center</mat-label>
+            <input matInput placeholder="Name of school/ Center" formControlName="nameOfSchoolOrCenter">
+          </mat-form-field>
+  
+  
+  
+          <mat-form-field appearance="outline" class="width-45 marging-right-10">
+            <input matInput placeholder="Year of Establishment" formControlName="yearOfEstablishment">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="width-45 marging-left-10 ">
+            <mat-select [(ngModel)]="locationSelect" formControlName="location">
+              <mat-option value="Urban">Urban</mat-option>
+              <mat-option value="Rural">Rural</mat-option>
+              <mat-option  value="Other">Other</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+  
+      <div>
+  
         <mat-card>
-          <h3>If Onwership is Private</h3>
+          Address of the school
         </mat-card>
-
-    <mat-form-field  appearance="outline" class="width-10 ">
-      <mat-label>Belongs To</mat-label>
-      <mat-select placeholder="Belongs To"  formControlName="belongsTo">
-        <mat-option [value]="'belong'" *ngFor="let belong of belongsTo">{{belong}}</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-    <mat-form-field appearance="outline" class="width-10 ">
-      <input matInput placeholder="Others(Specify)" formControlName="other">
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Type of School/Center</mat-label>
-      <mat-select placeholder="School/Center Level"  formControlName="schoolOrCenterLevel" class="width-10 ">
-        <mat-option value="Pre-primary">Pre-Primary</mat-option>
-        <mat-option value="Primary">Primary</mat-option>
-        <mat-option value="Jnr.Sec. School">Jnr. Sec. School</mat-option>
-        <mat-option value="Snr. Sec. School">Snr. Sec. School</mat-option>
-        <mat-option value="NFE (Basic)">NFE (Basic)</mat-option>
-        <mat-option value="NFE (Post Lteracy)">NFE (Post Literacy)</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-
-    <mat-form-field appearance="outline" class="width-10 ">
-      <mat-label>Type of School/Center</mat-label>
-      <input matInput placeholder="Type of School/Center" formControlName="typeOfSchool">
-    </mat-form-field>
-
-
-    <mat-form-field appearance="outline">
-      <mat-select placeholder="Operational Mode (a)" formControlName="operationalModeA"  class="width-10 ">
-        <mat-label>Operational Mode A</mat-label>
-        <mat-option value="Boarding">Boarding</mat-option>
-        <mat-option value="Day"></mat-option>
-        <mat-option value="Boarding & Day"></mat-option>
-      </mat-select>
-    </mat-form-field>
-
-
-    <mat-form-field appearance="outline">
-          <mat-select placeholder="placeholder" formControlName="operationalModeB"  class="width-10 ">
-            <mat-label>Operational Mode B</mat-label>
-            <mat-option value="Morning">Morning</mat-option>
-            <mat-option value="Afternoon">Afternoon</mat-option>
-            <mat-option value="Shift">Shift</mat-option>
-            <mat-option value="Evening">Evening</mat-option>
-            <mat-option value="Night">Night</mat-option>
-          </mat-select>
-    </mat-form-field>
-
-
-    <mat-form-field class="width-10 " appearance="outline">
-        <input matInput placeholder="Name of H/T/Principal" formControlName="pricipalName">
-    </mat-form-field>
-
-    <mat-form-field appearance="outline" class="width-10">
-        <mat-select placeholder="Number of Assistance H/T/V.Ps" formControlName="numAsstHTPVPs" appearance="outline" class="width-10 " >
-          <mat-option value="1">1</mat-option>
-          <mat-option value="1">2</mat-option>
-          <mat-option value="1">3</mat-option>
-          <mat-option value="1">4</mat-option>
-          <mat-option value="1">5</mat-option>
-          <mat-option value="1">6</mat-option>
-          <mat-option value="Above 6">Above 6</mat-option>
+  
+        <mat-form-field appearance="outline" class="width-45 marging-right-10 ">
+          <mat-label>Street Address</mat-label>
+          <input matInput placeholder="Street" formControlName="streetAddress" type="text">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="width-45 marging-left-10 ">
+          <input matInput placeholder="P.O. Box" formControlName="poBox" type="text">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="width-45 marging-right-10 ">
+          <mat-label> Town / Village </mat-label>
+          <input matInput placeholder="placeholder" formControlName="town_Village" type="text">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="width-45 marging-left-10 ">
+          <mat-icon matSuffix>phone</mat-icon>
+          <mat-label> Town / Village </mat-label>
+          <input matInput placeholder="placeholder" formControlName="telephone" type="tel">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="width-45 marging-right-10 ">
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-label> Email </mat-label>
+          <input matInput placeholder="Enter Email" formControlName="email" type="email">
+        </mat-form-field>
+  
+      </div>
+  
+  
+  
+      <!---------------Another section---------------->
+      <div>
+        <mat-select [(ngModel)]="ownerShip" formControlName="ownerShip" [value]="" class="width-45 marging-right-10">
+          <mat-label>Ownership</mat-label>
+          <mat-option value="Private">Private</mat-option>
+          <mat-option value="Public"> Public</mat-option>
         </mat-select>
-    </mat-form-field >
-
-
-    <mat-form-field appearance="outline" class="width-10">
-          <mat-select placeholder="Number of HODs" formControlName="numberOfHODs"  class="width-10 ">
+      </div>
+  
+  
+  
+          <mat-card>
+            <h3>If Onwership is Private</h3>
+          </mat-card>
+  
+      <mat-form-field  appearance="outline" class="width-45 marging-right-10 ">
+        <mat-label>Belongs To</mat-label>
+        <mat-select placeholder="Belongs To"  formControlName="belongsTo">
+          <mat-option [value]="'belong'" *ngFor="let belong of belongsTo">{{belong}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="width-45 marging-left-10">
+        <input matInput placeholder="Others(Specify)" formControlName="other">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="width-45 marging-right-10">
+        <mat-label>Type of School/Center</mat-label>
+        <mat-select placeholder="School/Center Level"  formControlName="schoolOrCenterLevel" >
+          <mat-option value="Pre-primary">Pre-Primary</mat-option>
+          <mat-option value="Primary">Primary</mat-option>
+          <mat-option value="Jnr.Sec. School">Jnr. Sec. School</mat-option>
+          <mat-option value="Snr. Sec. School">Snr. Sec. School</mat-option>
+          <mat-option value="NFE (Basic)">NFE (Basic)</mat-option>
+          <mat-option value="NFE (Post Lteracy)">NFE (Post Literacy)</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+  
+      <mat-form-field appearance="outline" class="width-45 marging-left-10 ">
+        <mat-label>Type of School/Center</mat-label>
+        <input matInput placeholder="Type of School/Center" formControlName="typeOfSchool">
+      </mat-form-field>
+  
+  
+      <mat-form-field appearance="outline"  class="width-45 marging-right-10">
+        <mat-select placeholder="Operational Mode (a)" formControlName="operationalModeA" >
+          <mat-label>Operational Mode A</mat-label>
+          <mat-option value="Boarding">Boarding</mat-option>
+          <mat-option value="Day"></mat-option>
+          <mat-option value="Boarding & Day"></mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+  
+      <mat-form-field appearance="outline" class="width-45 marging-left-10 ">
+            <mat-select placeholder="placeholder" formControlName="operationalModeB"  >
+              <mat-label>Operational Mode B</mat-label>
+              <mat-option value="Morning">Morning</mat-option>
+              <mat-option value="Afternoon">Afternoon</mat-option>
+              <mat-option value="Shift">Shift</mat-option>
+              <mat-option value="Evening">Evening</mat-option>
+              <mat-option value="Night">Night</mat-option>
+            </mat-select>
+      </mat-form-field>
+  
+  
+      <mat-form-field class="width-45 marging-right-10 " appearance="outline">
+          <input matInput placeholder="Name of H/T/Principal" formControlName="pricipalName">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="width-45 marging-left-10 ">
+          <mat-select placeholder="Number of Assistance H/T/V.Ps" formControlName="numAsstHTPVPs" appearance="outline" >
             <mat-option value="1">1</mat-option>
             <mat-option value="1">2</mat-option>
             <mat-option value="1">3</mat-option>
@@ -228,201 +215,212 @@
             <mat-option value="1">6</mat-option>
             <mat-option value="Above 6">Above 6</mat-option>
           </mat-select>
-    </mat-form-field>
-
-
-    <div>
-      <mat-card>
-        <h3>Number of teachers living in the school compound</h3>
-      </mat-card>
-      <mat-form-field appearance="outline" class="width-10">
-        <input matInput placeholder="Females" formControlName="livingInComMale">
+      </mat-form-field >
+  
+  
+      <mat-form-field appearance="outline" class="width-45 marging-right-10 ">
+            <mat-select placeholder="Number of HODs" formControlName="numberOfHODs"  >
+              <mat-option value="1">1</mat-option>
+              <mat-option value="1">2</mat-option>
+              <mat-option value="1">3</mat-option>
+              <mat-option value="1">4</mat-option>
+              <mat-option value="1">5</mat-option>
+              <mat-option value="1">6</mat-option>
+              <mat-option value="Above 6">Above 6</mat-option>
+            </mat-select>
       </mat-form-field>
-
-      <mat-form-field appearance="outline" class="width-10">
-        <mat-label>Number of Females</mat-label>
-        <input matInput placeholder="Females" formControlName="livingInCompFemale">
+  
+  
+      <div>
+        <mat-card>
+          <h3>Number of teachers living in the school compound</h3>
+        </mat-card>
+        <mat-form-field appearance="outline" class="width-45 marging-right-10">
+          <input matInput placeholder="Females" formControlName="livingInComMale">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="width-50">
+          <mat-label>Number of Females</mat-label>
+          <input matInput placeholder="Females" formControlName="livingInCompFemale">
+        </mat-form-field>
+      </div>
+  
+      <div>
+  
+        <mat-card>
+          <h3>Number of guidance Counselors</h3>
+        </mat-card>
+  
+        <mat-form-field [appearance]="'outline'"  class="width-45 marging-right-10 ">
+          <mat-label>Number of Males</mat-label>
+          <input matInput placeholder="Males" formControlName="guideConselMale">
+        </mat-form-field>
+  
+        <mat-form-field [appearance]="'outline'" class="width-45 marging-left-10">
+          <mat-label>Number of Females</mat-label>
+          <input matInput placeholder="Females" formControlName="guideConselFemales">
+        </mat-form-field>
+  
+      </div>
+  
+      <mat-form-field [appearance]="'outline'" class="width-45 marging-right-10">
+        <mat-label>Source of funds</mat-label>
+        <mat-select placeholder="Indicate sources of funds"  formControlName="sourceOfFunds" class="">
+              <mat-option value="Government">Government</mat-option>
+              <mat-option value="PTA">PTA</mat-option>
+              <mat-option value="Development Parteners">Development Partners</mat-option>
+              <mat-option value="NGOs">NGOs</mat-option>
+              <mat-option value="Old students/Learner Ass">PPP</mat-option>
+              <mat-option value="PPP">PPP</mat-option>
+              <mat-option value="School Community">School Community</mat-option>
+              <mat-option value="SBMC">SBMC</mat-option>
+            </mat-select>
       </mat-form-field>
-    </div>
-
-    <div>
-
-      <mat-card>
-        <h3>Number of guidance Counselors</h3>
-      </mat-card>
-
-      <mat-form-field [appearance]="'outline'"  class="width-10 ">
-        <mat-label>Number of Males</mat-label>
-        <input matInput placeholder="Males" formControlName="guideConselMale">
-      </mat-form-field>
-
-      <mat-form-field [appearance]="'outline'" class="width-10  ">
-        <mat-label>Number of Females</mat-label>
-        <input matInput placeholder="Females" formControlName="guideConselFemales">
-      </mat-form-field>
-
-    </div>
-
-    <mat-form-field [appearance]="'outline'" class="width-10">
-      <mat-label>Source of funds</mat-label>
-      <mat-select placeholder="Indicate sources of funds"  formControlName="sourceOfFunds" class="">
-            <mat-option value="Government">Government</mat-option>
-            <mat-option value="PTA">PTA</mat-option>
-            <mat-option value="Development Parteners">Development Partners</mat-option>
-            <mat-option value="NGOs">NGOs</mat-option>
-            <mat-option value="Old students/Learner Ass">PPP</mat-option>
-            <mat-option value="PPP">PPP</mat-option>
-            <mat-option value="School Community">School Community</mat-option>
-            <mat-option value="SBMC">SBMC</mat-option>
-          </mat-select>
-    </mat-form-field>
-
-
-    </form>
-    </mat-step>
-
-
-
-
-
-     <div *ngFor="let question of dummyQuestions; let i = index">
-       <!--[stepControl]="surveyFormSection"-->
-         <mat-step>
-         <ng-template matStepLabel>Q1</ng-template>
-
-         <!--<ng-template #thenTemplate>-->
-           <form >
-             <mat-card>
-               <h3>
-                 {{ question.question }}
-               </h3>
-             </mat-card>
-
-             <mat-radio-group class="example-radio-group" >
-               <mat-radio-button class="example-radio-button" *ngFor="let option of question.optionses" [value]="option">
-                 {{option}}
-               </mat-radio-button>
-             </mat-radio-group>
-           </form>
-
-           <div>
-             <button mat-raised-button matStepperPrevious color="accent" class="width-10" style="margin-left: 5px">Back</button>
-             <button mat-raised-button matStepperNext color="primary" class="width-10" style="margin-left: 5px">Next</button>
-           </div>
-
-         <!--</ng-template>-->
-
-
-         <!--<ng-container *ngIf="question.doesOptionsesExist; then thenTemplate; else elseTemplate">-->
-
-           <!-----------------Then template -->
+  
+  
+      </form>
+      </mat-step>
+  
+  
+  
+  
+  
+       <div *ngFor="let question of dummyQuestions; let i = index">
+         <!--[stepControl]="surveyFormSection"-->
+           <mat-step>
+           <ng-template matStepLabel>Q1</ng-template>
+  
            <!--<ng-template #thenTemplate>-->
-             <!--<form [formGroup]="surveyFormSection">-->
-               <!--<mat-card>-->
+             <form >
+               <mat-card>
+                 <h3>
+                   {{ question.question }}
+                 </h3>
+               </mat-card>
+  
+               <mat-radio-group class="example-radio-group" >
+                 <mat-radio-button class="example-radio-button" *ngFor="let option of question.optionses" [value]="option">
+                   {{option}}
+                 </mat-radio-button>
+               </mat-radio-group>
+             </form>
+  
+             <div>
+               <button mat-raised-button matStepperPrevious color="accent" class="width-45 marging-right-10" style="margin-left: 5px">Back</button>
+               <button mat-raised-button matStepperNext color="primary" class="width-45 marging-left-10" style="margin-left: 5px">Next</button>
+             </div>
+  
+           <!--</ng-template>-->
+  
+  
+           <!--<ng-container *ngIf="question.doesOptionsesExist; then thenTemplate; else elseTemplate">-->
+  
+             <!-----------------Then template -->
+             <!--<ng-template #thenTemplate>-->
+               <!--<form [formGroup]="surveyFormSection">-->
+                 <!--<mat-card>-->
+                   <!--<h3>-->
+                     <!--{{ question.question }}-->
+                   <!--</h3>-->
+                 <!--</mat-card>-->
+  
+                 <!--<mat-card>-->
+                   <!--<mat-radio-group>-->
+                     <!--<mat-radio-button [value]="option" formControlName="answerController" *ngFor="let option of question.optionses">{{option}}</mat-radio-button>-->
+                   <!--</mat-radio-group>-->
+                 <!--</mat-card>-->
+  
+               <!--</form>-->
+  
+               <!--<div>-->
+                 <!--<button mat-button matStepperPrevious>Back</button>-->
+                 <!--<button mat-button matStepperNext>Next</button>-->
+               <!--</div>-->
+  
+             <!--</ng-template>-->
+             <!---->
+             <!--&lt;!&ndash;-&#45;&#45;Else statement -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+             <!--<ng-template #elseTemplate>-->
+               <!--<form [formGroup]="surveyFormSection">-->
                  <!--<h3>-->
                    <!--{{ question.question }}-->
                  <!--</h3>-->
-               <!--</mat-card>-->
-
-               <!--<mat-card>-->
-                 <!--<mat-radio-group>-->
-                   <!--<mat-radio-button [value]="option" formControlName="answerController" *ngFor="let option of question.optionses">{{option}}</mat-radio-button>-->
-                 <!--</mat-radio-group>-->
-               <!--</mat-card>-->
-
-             <!--</form>-->
-
-             <!--<div>-->
-               <!--<button mat-button matStepperPrevious>Back</button>-->
-               <!--<button mat-button matStepperNext>Next</button>-->
-             <!--</div>-->
-
-           <!--</ng-template>-->
-           <!---->
-           <!--&lt;!&ndash;-&#45;&#45;Else statement -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
-           <!--<ng-template #elseTemplate>-->
-             <!--<form [formGroup]="surveyFormSection">-->
-               <!--<h3>-->
-                 <!--{{ question.question }}-->
-               <!--</h3>-->
-               <!--<mat-form-field class="text-field" appearance="outline" class="width-10">-->
-                 <!--<mat-label>Enter Response</mat-label>-->
-                 <!--<input matInput placeholder="your answer" formControlName="control">-->
-               <!--</mat-form-field>-->
-             <!--</form>-->
-
-             <!--<div>-->
-               <!--<button mat-button matStepperPrevious>Back</button>-->
-               <!--<button mat-button matStepperNext>Next</button>-->
-             <!--</div>-->
-           <!--</ng-template>-->
-
-         <!--</ng-container>-->
+                 <!--<mat-form-field class="text-field" appearance="outline" class="width-50">-->
+                   <!--<mat-label>Enter Response</mat-label>-->
+                   <!--<input matInput placeholder="your answer" formControlName="control">-->
+                 <!--</mat-form-field>-->
+               <!--</form>-->
+  
+               <!--<div>-->
+                 <!--<button mat-button matStepperPrevious>Back</button>-->
+                 <!--<button mat-button matStepperNext>Next</button>-->
+               <!--</div>-->
+             <!--</ng-template>-->
+  
+           <!--</ng-container>-->
+         </mat-step>
+       </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+       <mat-step [stepControl]="finalSection">
+       <form [formGroup]="finalSection">
+               <mat-form-field appearance="outline" class="width-100 marging-right-10 ">
+                 <mat-label>Name of the chairman of SBMC</mat-label>
+                 <input matInput placeholder="Name of the chairman of SBMC" appearance="outline">
+               </mat-form-field>
+  
+               <!------ Signature pad should be here---------->
+               <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>'
+  
+               <mat-form-field appearance="outline" class="width-45 marging-right-10 ">
+                 <mat-label>Date</mat-label>
+                 <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="dateF">
+                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                 <mat-datepicker #picker></mat-datepicker>
+               </mat-form-field>
+  
+               <mat-form-field appearance="outline" class="width-45 marging-left-10 ">
+                 <mat-label>Name of Principal</mat-label>
+                 <input matInput placeholder="Name of Principal /Head teacher" formControlName="nameOfPF">
+               </mat-form-field>
+  
+  
+               <!------ Signature pad should be here---------->
+               <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>'
+  
+  
+  
+               <mat-form-field appearance="outline" class="width-45 marging-right-10 ">
+                 <mat-label>Date</mat-label>
+                 <input matInput [matDatepicker]="picker1" placeholder="Choose a date" formControlName="dateF_1">
+                   <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                   <mat-datepicker #picker1 startView="year" ></mat-datepicker>
+               </mat-form-field>
+  
+               <mat-form-field appearance="outline" class="width-45 marging-left-10 ">
+                 <mat-label>Date</mat-label>
+                 <input matInput [matDatepicker]="picker2" placeholder="Choose a date" formControlName="dateF_2">
+                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                     <mat-datepicker #picker2 startView="year" ></mat-datepicker>
+               </mat-form-field>
+  
+           </form>
+             <div>
+                  <button mat-raised-button (click)="finaliseSelfEvaluation()" color="primary">Finalise Self Survey</button>
+             </div>
        </mat-step>
-     </div>
-
-
-
-
-
-
-
-
-
-
-
-     <mat-step [stepControl]="finalSection">
-     <form [formGroup]="finalSection">
-             <mat-form-field appearance="outline" class="width-10">
-               <mat-label>Name of the chairman of SBMC</mat-label>
-               <input matInput placeholder="Name of the chairman of SBMC" appearance="outline">
-             </mat-form-field>
-
-             <!------ Signature pad should be here---------->
-             <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>'
-
-             <mat-form-field appearance="outline" class="width-10">
-               <mat-label>Date</mat-label>
-               <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="dateF">
-               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-               <mat-datepicker #picker></mat-datepicker>
-             </mat-form-field>
-
-             <mat-form-field appearance="outline" class="width-10">
-               <mat-label>Name of Principal</mat-label>
-               <input matInput placeholder="Name of Principal /Head teacher" formControlName="nameOfPF">
-             </mat-form-field>
-
-
-             <!------ Signature pad should be here---------->
-             <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>'
-
-
-
-             <mat-form-field appearance="outline" class="width-10">
-               <mat-label>Date</mat-label>
-               <input matInput [matDatepicker]="picker1" placeholder="Choose a date" formControlName="dateF_1">
-                 <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                 <mat-datepicker #picker1 startView="year" ></mat-datepicker>
-             </mat-form-field>
-
-             <mat-form-field appearance="outline" class="width-10">
-               <mat-label>Date</mat-label>
-               <input matInput [matDatepicker]="picker2" placeholder="Choose a date" formControlName="dateF_2">
-                   <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-                   <mat-datepicker #picker2 startView="year" ></mat-datepicker>
-             </mat-form-field>
-
-         </form>
-           <div>
-                <button mat-raised-button (click)="finaliseSelfEvaluation()" color="primary">Finalise Self Survey</button>
-           </div>
-     </mat-step>
-
-
-
-   </mat-horizontal-stepper>
-   </mat-card-content>
-</mat-card>
-
-
+  
+  
+  
+     </mat-horizontal-stepper>
+     </mat-card-content>
+  </mat-card>
